@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+// themes - our custom or/and out of the box themes
+@import 'themes';
+
+// framework component themes (styles tied to theme variables)
+@import '~@nebular/theme/styles/globals';
+@import '~bootstrap/scss/bootstrap.scss';
+
+@import './overrides';
+@import './animations';
+@import './utilities';
+
+@include nb-install() {
+	@include nb-theme-global();
+	@include nb-overrides();
+	@include bootstrap-overrides();
+}
+
+pre {
+	margin-bottom: 0;
+}
+
+nb-alert {
+	margin-bottom: 0.5rem;
+}
+
+.menu-expander {
+	position: relative;
+	right: 0;
+	top: 0;
+}

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "jrasm-com": {
+      "hosting": {
+        "jrasm-docs": [
+          "jrasm-docs"
+        ]
+      }
+    }
+  }
+}

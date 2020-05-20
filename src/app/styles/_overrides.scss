@@ -1,0 +1,49 @@
+@import './themes';
+
+@mixin nb-overrides() {
+	nb-sidebar {
+		nb-menu {
+			nb-icon {
+				margin-right: 0.5rem !important;
+			}
+
+			.menu-title {
+				margin-left: 0.5rem;
+			}
+		}
+	}
+
+	nb-layout nb-sidebar > div.main-container-fixed {
+		top: 0 !important;
+	}
+
+	nb-layout .layout {
+		background-color: nb-theme(background-basic-color-1);
+	}
+
+	@each $status in nb-get-statuses() {
+		.text-#{$status} {
+			color: nb-theme(color-#{$status}-default) !important;
+		}
+
+		nb-list-item.status-#{$status} {
+			background-color: nb-theme(color-#{$status}-default);
+			color: nb-theme(color-#{$status}-100);
+		}
+	}
+}
+
+@mixin bootstrap-overrides() {
+	// .table {
+	// 	color: nb-theme(text-basic-color);
+	// 	background-color: nb-theme(background-basic-color-1);
+	// }
+}
+
+.table {
+	margin-bottom: 0;
+}
+
+.table thead th {
+	border-top: none;
+}

@@ -1,0 +1,40 @@
+<nb-layout windowMode>
+	<nb-sidebar class="menu-sidebar" tag="menu-sidebar" state="collapsed" #mainMenu>
+		<div>
+			<div class="text-right">
+				<nb-icon
+					icon="angle-double-{{ mainMenu.compacted ? 'right' : 'left' }}"
+					(click)="mainMenu.toggle(true)"
+					class="cursor-pointer">
+				</nb-icon>
+			</div>
+			<div [ngClass]="mainMenu.compacted? 'invisible': 'visible'" class="transition-visibility">
+				<h1>Docs</h1>
+				<div>
+					<nb-toggle (checkedChange)="toggleGroups($event)" size="tiny">Groups</nb-toggle>
+				</div>
+				<nb-menu [items]="menu"></nb-menu>
+			</div>
+		</div>
+	</nb-sidebar>
+
+	<nb-layout-column>
+		<router-outlet></router-outlet>
+	</nb-layout-column>
+
+	<nb-sidebar class="menu-sidebar" tag="options-sidebar" state="collapsed" right #optionsMenu>
+		<div>
+			<nb-icon
+				icon="angle-double-{{ optionsMenu.compacted ? 'left' : 'right' }}"
+				(click)="optionsMenu.toggle(true)"
+				class="cursor-pointer">
+			</nb-icon>
+		</div>
+		<div [ngClass]="optionsMenu.compacted? 'invisible': 'visible'" class="transition-visibility">
+			<h1>Options</h1>
+			<div>
+				<nb-toggle (checkedChange)="toggleGroups($event)">Groups</nb-toggle>
+			</div>
+		</div>
+	</nb-sidebar>
+</nb-layout>

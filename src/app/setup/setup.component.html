@@ -1,0 +1,9 @@
+<div class="text-center">
+	<h1>Welcome!</h1>
+	<div>
+		<!-- <hr> -->
+		<h5>Upload a postman collection to get started.</h5>
+		<button nbButton (click)="inputEl.click()">Upload File</button>
+		<input type="file" accept=".json" [multiple]="false" (change)="onChange()" #inputEl hidden>
+	</div>
+</div>
