@@ -61,7 +61,7 @@
 		"@angular/language-service": "8.0.0",
 		"@commitlint/cli": "^8.3.5",
 		"@commitlint/config-conventional": "^8.3.4",
-		"@compodoc/compodoc": "1.0.1",
+		"@compodoc/compodoc": "1.1.19",
 		"@fortawesome/fontawesome-free": "^5.13.0",
 		"@types/d3-color": "1.0.5",
 		"@types/jasmine": "2.5.54",
